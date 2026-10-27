@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conorstano-evalsheet"
+version = "0.1.0"
+description = "把多维评测结果整理成分数卡，给出每维的样本量、均值与置信区间"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "conorstano" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://conorstano.github.io"
+Repository = "https://github.com/conorstano/evalsheet"
+Issues = "https://github.com/conorstano/evalsheet/issues"
+
+[project.scripts]
+evalsheet = "evalsheet:main"
+
+[tool.setuptools]
+py-modules = ["evalsheet"]
